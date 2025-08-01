@@ -35,6 +35,8 @@ getsource () {
     set -x
     git clone --depth=1 $KERNEL_SOURCE $KBRANCH common
     set +x
+    echo Patch MSM-5.4
+    git clone https://github.com/sunscape-stuff/msm-5.4 common/kernel/
     fi
 }
 gettools () {
