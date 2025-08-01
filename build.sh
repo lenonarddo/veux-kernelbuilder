@@ -26,6 +26,8 @@ case $HOSTNAME in
   (*)  ISACTIONS=0 ;;
 esac
 
+ISACTIONS=1
+
 getsource () {
     if [ ! -d "common" ]; then
     echo ============================
