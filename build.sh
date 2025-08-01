@@ -38,7 +38,7 @@ getsource () {
     set -x
     echo Patch MSM-5.4
     cd common/kernel/
-    git clone https://github.com/sunscape-stuff/msm-5.4 common/kernel/
+    git clone --depth=1 https://github.com/sunscape-stuff/msm-5.4 common/kernel/
     cd ../../
     fi
     set +x
