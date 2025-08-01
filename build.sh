@@ -13,7 +13,7 @@ KSU=1 # set to 1 to enable KernelSU; if not leave the same
            # set to "-b <kernel branch name>" if you want to
 CLANGDL="https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/android11-qpr2-release/clang-r383902b1.tar.gz"
         # direct link to Clang toolchain
-KERNEL_SOURCE=https://github.com/MiCode/Xiaomi_Kernel_OpenSource
+KERNEL_SOURCE=https://github.com/lenonarddo/XiaomiKernel
 
 KBRANCH="-b veux-r-oss"
 
@@ -33,7 +33,7 @@ getsource () {
     echo ============================
     echo Downloading kernel source...
     set -x
-    git clone --depth=1 $KERNEL_SOURCE $KBRANCH common
+    git clone --depth=1 $KERNEL_SOURCE common
     set +x
     fi
     set -x
