@@ -36,13 +36,11 @@ getsource () {
     git clone --depth=1 $KERNEL_SOURCE $KBRANCH common
     set +x
     fi
-    if [ ! -d "common/kernel/msm-5.4" ]; then
     set -x
     echo Patch MSM-5.4
     cd common/kernel/
-    git clone --depth=1 https://github.com/sunscape-stuff/msm-5.4
+    git clone --depth=1 https://github.com/sunscape-stuff/msm-5.4 msm-5.4
     cd ../../
-    fi
     set +x
 }
 gettools () {
