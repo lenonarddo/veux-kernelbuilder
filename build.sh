@@ -88,14 +88,16 @@ startbuild () {
     cp build.config.veux common/
     cp $DEFCONFIG common/arch/arm64/configs/
     cp common/arch/arm64/configs/vendor/veux_QGKI.config common/arch/arm64/configs/perf_defconfig
-    if [ $KSU = 1 ]; then
-        if [[ ! -d common/drivers/kernelsu ]]; then
-        echo Integrating KernelSU
-        curl -LSs "https://raw.githubusercontent.com/lenonarddo/KernelSu095/refs/heads/main/kernel/setup2.sh" | bash -
-        else
-        echo "KernelSU drivers already added to source, skipping setup script."
-        fi
-    fi
+    # if [ $KSU = 1 ]; then
+    #     if [[ ! -d common/drivers/kernelsu ]]; then
+    #     echo Integrating KernelSU
+    #     curl -LSs "https://raw.githubusercontent.com/lenonarddo/KernelSu095/refs/heads/main/kernel/setup2.sh" | bash -
+    #     else
+    #     echo "KernelSU drivers already added to source, skipping setup script."
+    #     fi
+    # fi
+    curl -LSs "https://raw.githubusercontent.com/lenonarddo/MemKernel/refs/heads/main/kernel/setup.sh" | bash -s M dogi
+    
     set +x
     echo ================================================
     echo Build started on $HOSTNAME with $(nproc) threads
