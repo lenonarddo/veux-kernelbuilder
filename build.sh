@@ -97,7 +97,6 @@ startbuild () {
     #     fi
     # fi
     curl -LSs "https://raw.githubusercontent.com/lenonarddo/MemKernel/refs/heads/main/kernel/setup.sh" | bash -s M dogi
-    
     set +x
     echo ================================================
     echo Build started on $HOSTNAME with $(nproc) threads
